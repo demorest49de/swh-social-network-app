@@ -1,9 +1,9 @@
 import React from 'react';
 import {Main} from './main';
 import {Nav} from "./nav";
-import s from "./App.module.css";
+import s from "./App.module.scss";
 import {Footer} from "./footer";
-import {Header} from "./Layout/header/Header";
+import {Header} from "./Components/Header/Header";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
             <Header/>
             <Nav/>
             <Main/>
-            <Footer/>
+            {/*<Footer/>*/}
         </div>
     );
 }
