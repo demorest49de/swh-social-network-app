@@ -1,18 +1,16 @@
 import React from 'react';
-import {Main} from './main';
-import {Nav} from "./nav";
-import s from "./App.module.scss";
-import {Footer} from "./footer";
+import {Main} from './Components/Main/main';
+import {Nav} from "./Components/Nav/nav";
+import  "./App.scss";
 import {Header} from "./Components/Header/Header";
 
 
 function App() {
     return (
-        <div className={s.App}>
+        <div className='App'>
             <Header/>
             <Nav/>
             <Main/>
-            {/*<Footer/>*/}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import s from './App.module.scss'
-import picture from"./Assets/img/premium_photo-1669324357471-e33e71e3f3d8.avif"
+import picture from "../../Assets/img/premium_photo-1669324357471-e33e71e3f3d8.avif"
+import s from './Main.module.scss'
 
 export const Main = () => {
     return (
