@@ -1,14 +1,14 @@
 .App {
   display: grid;
-
+  max-width: 1920px;
+  margin: 0 auto;
   grid-template-columns:  2fr 10fr;
   grid-template-rows:  60px 1fr 60px;
 
   grid-template-areas:
   'h h'
   'n c'
-  'f f'
-;
+  'f f';
   gap: 10px;
   height: 100vh;
 }
@@ -16,31 +16,31 @@
 .header,
 .nav,
 .content,
-.footer{
+.footer {
   width: 100%;
 }
 
 
 .header {
   grid-area: h;
-  background-color:  chocolate;
+  background-color: chocolate;
 }
 
 .nav {
   grid-area: n;
-  background-color:  cornflowerblue;
+  background-color: cornflowerblue;
 }
 
 .content {
   grid-area: c;
-  background-color:  goldenrod;
-  background-image:  url("./Assets/img/premium_photo-1669324357471-e33e71e3f3d8.avif");
+  background-color: goldenrod;
+  background-image: url("./Assets/img/premium_photo-1669324357471-e33e71e3f3d8.avif");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:  left bottom;
+  background-position: left bottom;
 }
 
 .footer {
   grid-area: f;
-  background-color:  lawngreen;
+  background-color: lawngreen;
 }
