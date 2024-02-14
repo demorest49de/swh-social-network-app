@@ -8,21 +8,6 @@ export const Main = () => {
             <img className={s.main__img} src={picture} alt="it"/>
             <About/>
             <MyPosts/>
-            <div>
-                history
-                <div>
-                    Posts
-                    <div>
-                        Post 1
-                    </div>
-                    <div>
-                        Post 1
-                    </div>
-                    <div>
-                        Post 1
-                    </div>
-                </div>
-            </div>
         </main>
     );
 };
@@ -34,7 +19,9 @@ const About = () => {
                 <picture>
                     <img src="" alt=""/>
                 </picture>
-                <div className="about__personal-info"></div>
+                <div className="about__personal-info">
+
+                </div>
             </div>
         </section>
     )
@@ -42,17 +29,6 @@ const About = () => {
 
 type PostType = {
     message: string
-}
-
-const Post = ({message}: PostType) => {
-
-    return (
-        <div className="post__item">
-            <img src="" alt=""/>
-            <p>{message}</p>
-            <span>like</span>
-        </div>
-    )
 }
 
 const MyPosts = () => {
@@ -63,9 +39,22 @@ const MyPosts = () => {
                 <textarea name="" id=""></textarea>
                 <button type="submit"></button>
                 <div className="posts__history">
-                    <Post message={''}/>.
+                    <Post message={'!!!'}/>
+                    <Post message={'!!!'}/>
+                    <Post message={'!!!!'}/>
                 </div>
             </div>
         </section>
+    )
+}
+
+const Post = ({message}: PostType) => {
+
+    return (
+        <div className="post__item">
+            <img src="" alt=""/>
+            <p>{message}</p>
+            <span>like</span>
+        </div>
     )
 }
