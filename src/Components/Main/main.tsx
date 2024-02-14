@@ -6,14 +6,8 @@ export const Main = () => {
     return (
         <main className={s.main}>
             <img className={s.main__img} src={picture} alt="it"/>
-            <div>
-                ava + description
-            </div>
-            <div>
-                subtitle
-                input
-                button
-            </div>
+            <About/>
+            <MyPosts/>
             <div>
                 history
                 <div>
@@ -32,3 +26,46 @@ export const Main = () => {
         </main>
     );
 };
+
+const About = () => {
+    return (
+        <section className='about'>
+            <div className="container">
+                <picture>
+                    <img src="" alt=""/>
+                </picture>
+                <div className="about__personal-info"></div>
+            </div>
+        </section>
+    )
+}
+
+type PostType = {
+    message: string
+}
+
+const Post = ({message}: PostType) => {
+
+    return (
+        <div className="post__item">
+            <img src="" alt=""/>
+            <p>{message}</p>
+            <span>like</span>
+        </div>
+    )
+}
+
+const MyPosts = () => {
+    return (
+        <section className="posts">
+            <div className="container">
+                <h3>My posts</h3>
+                <textarea name="" id=""></textarea>
+                <button type="submit"></button>
+                <div className="posts__history">
+                    <Post message={''}/>.
+                </div>
+            </div>
+        </section>
+    )
+}
