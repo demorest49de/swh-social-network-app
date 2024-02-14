@@ -2,17 +2,52 @@ import React from 'react';
 import picture from "../../Assets/img/premium_photo-1669324357471-e33e71e3f3d8.avif"
 import s from './Main.module.scss'
 
+// type UsersList = {
+//     userInfoArray: UserInfoType[]
+// }
+
+type UserType = {
+    personal: PersonalProps
+    address: AddressProps
+}
+
+type AddressProps = {
+    city: string
+}
+
+type PersonalProps = {
+    name: string,
+    sex: string,
+    age: number
+}
+
 export const Main = () => {
+    const userInfoArray = [
+        {
+            personal: {
+                name: 'dima',
+                sex: 'male',
+                age: 30
+            },
+            address: {
+                city: 'Minsk',
+            }
+        },
+    ];
+
+    const user = userInfoArray[0]
+
     return (
         <main className={s.main}>
             <img className={s.main__img} src={picture} alt="it"/>
-            <About/>
+            <About {...user}/>
             <MyPosts/>
         </main>
     );
 };
 
-const About = () => {
+const About = ({personal}: UserType) => {
+
     return (
         <section className='about'>
             <div className="container">
@@ -20,7 +55,7 @@ const About = () => {
                     <img src="" alt=""/>
                 </picture>
                 <div className="about__personal-info">
-
+                    <span>name: {personal.name}</span>
                 </div>
             </div>
         </section>
