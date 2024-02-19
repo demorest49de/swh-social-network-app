@@ -2,7 +2,7 @@ import React from 'react';
 import {Main} from './Components/Main/main';
 import {Nav} from "./Components/Nav/nav";
 import  "./App.scss";
-import {Header} from "./Components/Header/Header";
+import {Header} from "./Components/header/Header";
 
 
 function App() {
