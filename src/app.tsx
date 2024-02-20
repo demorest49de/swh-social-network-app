@@ -1,17 +1,26 @@
 import React from 'react';
 import {Main} from './Components/Main/main';
-import {Nav} from "./Components/Nav/nav";
-import  "./App.scss";
-import {Header} from "./Components/header/Header";
+import {Aside} from "./Components/Aside/aside";
+import "./App.scss";
+import {Header} from "./Components/Header/Header";
+import {Dialogs} from "./Components/Dialogs/Dialogs";
 
 
 function App() {
+    const dataLinks = [
+        {title: 'Profile'},
+        {title: 'Messages'},
+        {title: 'News'},
+        {title: 'Music'},
+        {title: 'Settings'},
+    ]
     return (
         <div className='App'>
             <h1></h1>
             <Header/>
-            <Nav/>
-            <Main/>
+            <Aside titleArray={dataLinks}/>
+            {/*<Main/>*/}
+            <Dialogs/>
         </div>
     );
 }

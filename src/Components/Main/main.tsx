@@ -2,10 +2,6 @@ import React from 'react';
 import picture from "../../Assets/img/premium_photo-1669324357471-e33e71e3f3d8.avif"
 import s from './Main.module.scss'
 
-// type UsersList = {
-//     userInfoArray: UserInfoType[]
-// }
-
 type UserType = {
     personal: PersonalProps
     address: AddressProps
