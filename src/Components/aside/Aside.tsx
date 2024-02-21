@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./App.module.css";
+import s from "./Aside.module.css";
 
 type AsideProps = {
     titleArray: Array<TitleProps>
@@ -12,7 +12,7 @@ type TitleProps = {
 export const Aside = ({titleArray}: AsideProps) => {
     const mappedLinks = titleArray.map(title=>{
         return(
-            <li key={title.title}><a href="/">{title.title}</a></li>
+            <li key={title.title}><a href="/public">{title.title}</a></li>
         )
     })
     return (
