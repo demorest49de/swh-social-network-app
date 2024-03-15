@@ -13,11 +13,26 @@ function App() {
 
 
     const dataLinks = [
-        {title: 'Profile'},
-        {title: 'Messages'},
-        {title: 'News'},
-        {title: 'Music'},
-        {title: 'Settings'},
+        {
+            title: 'Profile',
+            link: 'profile',
+        },
+        {
+            title: 'Messages',
+            link: 'messages',
+        },
+        {
+            title: 'News',
+            link: 'news',
+        },
+        {
+            title: 'Music',
+            link: 'music',
+        },
+        {
+            title: 'Settings',
+            link: 'settings',
+        },
     ]
     return (
         <div className={s.App}>

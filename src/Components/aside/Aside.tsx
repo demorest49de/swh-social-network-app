@@ -1,5 +1,6 @@
 import React from 'react';
 import s from "./Aside.module.css";
+import {NavLink} from "react-router-dom";
 
 type AsideProps = {
     titleArray: Array<TitleProps>
@@ -7,12 +8,13 @@ type AsideProps = {
 
 type TitleProps = {
     title: string
+    link: string
 }
 
 export const Aside = ({titleArray}: AsideProps) => {
     const mappedLinks = titleArray.map(title=>{
         return(
-            <li key={title.title}><a href="/public">{title.title}</a></li>
+            <li key={title.title}><NavLink to='messages'>{title.title}</NavLink></li>
         )
     })
     return (
@@ -20,9 +22,6 @@ export const Aside = ({titleArray}: AsideProps) => {
             <nav className={s.nav}>
                 <ul>
                     {mappedLinks}
-                    {/* <li><a href="/">{title}</a></li>
-                    <li><a href="/">{title}</a></li>
-                    <li><a href="/">{title}</a></li> */}
                 </ul>
             </nav>
         </aside>
