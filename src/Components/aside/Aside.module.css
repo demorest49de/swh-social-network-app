@@ -1,5 +1,18 @@
-.aside{
+.aside {
   grid-area: aside;
-  background-color: cornflowerblue;
+  background-color: #1c2a45;
   padding: 5px
+}
+
+/*TODO ne pereopredeljaetsja*/
+.navlink {
+  color: #000000;
+}
+
+.isPending {
+  color: #21ff05;
+}
+
+a.active {
+  color: #f17fed;
 }

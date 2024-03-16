@@ -6,12 +6,6 @@ import {Header} from "./Components/header/Header";
 
 function App() {
 
-    const users: Array<UserType> = [
-        {id: '101', name: 'vasja1'},
-        {id: '102', name: 'vasja2'}
-    ]
-
-
     const dataLinks = [
         {
             title: 'Profile',
@@ -36,7 +30,7 @@ function App() {
     ]
     return (
         <div className={s.App}>
-            <Main users={users}/>
+            <Main />
             <Header/>
             <Aside titleArray={dataLinks}/>
         </div>

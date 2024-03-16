@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from "./Aside.module.css";
 import {NavLink} from "react-router-dom";
+import {LiStyled} from "./AsideStyled";
 
 type AsideProps = {
     titleArray: Array<TitleProps>
@@ -12,14 +13,29 @@ type TitleProps = {
 }
 
 export const Aside = ({titleArray}: AsideProps) => {
-    const mappedLinks = titleArray.map(title=>{
-        return(
-            <li key={title.title}><NavLink to='messages'>{title.title}</NavLink></li>
+    const [isLoading, setIsLoading] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+
+    const onClickHandler = () => {
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+    };
+
+    const mappedLinks = titleArray.map(elem => {
+        return (
+            <LiStyled key={elem.title}><NavLink to={elem.link}
+                                                className={({isActive}) =>
+                                                    isActive ? (isLoading ? s.isPending : s.active) : s.navlink
+                                                }
+                                                onClick={onClickHandler}
+            >{elem.title}</NavLink></LiStyled>
         )
     })
     return (
         <aside className={s.aside}>
-            <nav className={s.nav}>
+            <nav>
                 <ul>
                     {mappedLinks}
                 </ul>
@@ -27,3 +43,4 @@ export const Aside = ({titleArray}: AsideProps) => {
         </aside>
     );
 };
+
