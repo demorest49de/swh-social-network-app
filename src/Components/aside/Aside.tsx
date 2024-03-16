@@ -14,7 +14,6 @@ type TitleProps = {
 
 export const Aside = ({titleArray}: AsideProps) => {
     const [isLoading, setIsLoading] = useState(false);
-    const [isActive, setIsActive] = useState(false);
 
     const onClickHandler = () => {
         setIsLoading(true);
@@ -25,12 +24,16 @@ export const Aside = ({titleArray}: AsideProps) => {
 
     const mappedLinks = titleArray.map(elem => {
         return (
-            <LiStyled key={elem.title}><NavLink to={elem.link}
-                                                className={({isActive}) =>
-                                                    isActive ? (isLoading ? s.isPending : s.active) : s.navlink
-                                                }
-                                                onClick={onClickHandler}
-            >{elem.title}</NavLink></LiStyled>
+            <li className={s.nav__item} key={elem.title}
+                // use clsx
+                // <div className={`${s.link} ${true && s.isActive}`}></div>
+            >
+                <NavLink to={elem.link}
+                         className={({isActive}) =>
+                             isActive ? (isLoading ? s.isPending : s.active) : s.navlink
+                         }
+                         onClick={onClickHandler}
+                >{elem.title}</NavLink></li>
         )
     })
     return (

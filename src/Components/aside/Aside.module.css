@@ -1,12 +1,12 @@
 .aside {
   grid-area: aside;
-  background-color: #1c2a45;
+  background-color: #5c6981;
   padding: 5px
 }
 
 /*TODO ne pereopredeljaetsja*/
 .navlink {
-  color: #000000;
+  color: #000d63;
 }
 
 .isPending {
@@ -15,4 +15,31 @@
 
 a.active {
   color: #f17fed;
+}
+
+.nav__item:not(:nth-last-child(1)){
+  margin-bottom: 5px;
+}
+
+.nav__item:has(a.active) {
+  padding: 3px;
+  border-radius: 15px;
+  outline-offset: 2px;
+  outline: 2px solid chocolate;
+}
+
+.link {
+  background-color: red;
+
+  &.isActive {
+    background-color: blue;
+  }
+}
+
+.link {
+  background-color: red;
+}
+
+.link.isActive {
+  background-color: blue;
 }
